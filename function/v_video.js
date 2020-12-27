@@ -15,7 +15,7 @@ const axios = require('axios')
 var date = new Date()
 const headers = {
     'Referer': 'https://v.qq.com',
-    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.204 Safari/537.36',
+    'User-Agent':'Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1',
     'Cookie': _cookie
 }
 
