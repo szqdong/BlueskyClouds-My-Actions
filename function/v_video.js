@@ -92,9 +92,11 @@ function refCookie(url = ref_url) {
         axios({ url, headers }).then(e =>{
             const { vusession } = parseSet(e.headers['set-cookie'])
             const { vqq_vusession } = parseSet(e.headers['set-cookie'])
-            //微信和QQ参数不同
+            const { access_token } = parseSet(e.headers['set-cookie'])
+            //微信多一个access_token
             if (vusession) {
                 auth['vusession'] = vusession
+                auth['access_token'] = access_token
             } else {
                 auth['vqq_vusession'] = vqq_vusession
             }
@@ -114,7 +116,6 @@ function ref_url_ver(url = ref_url,_cookie) {
     $.get({
         url, headers
     }, function(error, response, data) {
-        //console.log(data)
         if (error) {
             $.log(error);
             console.log("腾讯视频会员签到", "验证ref_url请求失败 ‼️‼️", error)
