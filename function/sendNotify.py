@@ -188,6 +188,7 @@ class sendNotify:
         title = kwargs.get("title", "")
         msg = kwargs.get("msg", "")
         send.serverNotify(title,msg)
+        send.serverNotify("My-Actions 项目通知", "由于server推送升级，使用本项目 My-Actions" + "\n" + "https://github.com/BlueskyClouds/My-Actions" + "\n" + " 将在18号使用升级 请在18号后使用新的SendKey 替换旧的即可")
         send.BarkNotify(title,msg)
         send.tgBotNotify(title,msg)
         send.dingNotify(title,msg)
